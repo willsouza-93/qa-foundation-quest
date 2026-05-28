@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Plataforma gamificada de estudos para ISTQB CTFL v4.0.1" />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>QA Foundation Quest — ISTQB CTFL v4.0.1</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Ir para o conteúdo</a>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Navegação principal">
+        <div class="brand"><span class="brand-mark">Q</span><div><strong>QA Foundation Quest</strong><small>CTFL v4.0.1</small></div></div>
+        <nav id="mainNav" class="nav"></nav>
+        <section class="sidebar-card">
+          <p class="eyebrow">Meta diária</p>
+          <strong id="dailyGoalText">0/15 XP</strong>
+          <div class="progress"><span id="dailyGoalBar"></span></div>
+        </section>
+      </aside>
+      <div class="main-wrap">
+        <header class="topbar">
+          <button class="icon-btn menu-btn" id="menuToggle" aria-label="Abrir menu">☰</button>
+          <div class="search-wrap">
+            <label class="sr-only" for="globalSearch">Busca global</label>
+            <input id="globalSearch" type="search" placeholder="Buscar módulos, termos, LOs e questões..." autocomplete="off" />
+            <div id="searchResults" class="search-results" role="listbox"></div>
+          </div>
+          <button class="icon-btn" id="focusMode" title="Modo foco" aria-label="Alternar modo foco">◎</button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">🌙</button>
+        </header>
+        <main id="app" tabindex="-1" aria-live="polite">
+          <section class="skeleton-grid" aria-label="Carregando conteúdo"><span></span><span></span><span></span></section>
+        </main>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="data/content.js"></script>
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
