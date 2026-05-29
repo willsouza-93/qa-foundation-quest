@@ -1,5 +1,5 @@
-const CACHE = 'qa-foundation-quest-v1';
-const ASSETS = ['./','./index.html','./styles/main.css','./scripts/storage.js','./scripts/app.js','./data/content.js','./manifest.webmanifest','./assets/favicon.svg'];
+const CACHE = 'qa-foundation-quest-v2';
+const ASSETS = ['./','./index.html','./styles/main.css','./scripts/storage.js','./scripts/app.js','./data/fundamentals.js','./data/lifecycle.js','./data/static-testing.js','./data/techniques.js','./data/management.js','./data/tools.js','./data/content.js','./manifest.webmanifest','./assets/favicon.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
