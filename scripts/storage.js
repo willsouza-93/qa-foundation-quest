@@ -4,8 +4,8 @@ window.QAStore = (() => {
   const defaults = () => ({
     xp: 0, dailyXp: 0, dailyDate: today(), streak: 0, lastStudyDate: '', level: 1,
     theme: 'dark', focus: false, lastModule: 'fundamentos', completedModules: [],
-    loStatus: {}, knownCards: {}, dueCards: {}, favoriteTerms: [], wrongQuestions: [],
-    quizHistory: [], examHistory: [], badges: [], goals: { dailyXp: 15 }, answers: {}
+    loStatus: {}, knownCards: {}, dueCards: {}, cardStatus: {}, favoriteTerms: [], wrongQuestions: [],
+    quizHistory: [], examHistory: [], badges: [], goals: { dailyXp: 15, dailyQuestions: 10 }, answers: {}
   });
   const load = () => {
     try { return { ...defaults(), ...(JSON.parse(localStorage.getItem(KEY)) || {}) }; }
